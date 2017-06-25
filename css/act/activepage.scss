@@ -1,0 +1,79 @@
+body{background:url(../../img/hd/bg.jpg)}
+.active_banner{
+	width:1200px;margin:0 auto;
+	position:relative;
+	img{width:100%;}
+	}
+.banner{position:fixed;bottom:100px;right:35px;width:300px;z-index:10;
+		img{width:300px; position:absolute; opacity:0}}
+ 
+.leftSuspension{
+	width:100px;
+	height:500px;
+	position:fixed;
+	top:25%;
+	left:30px;
+
+	a{display:block;width:100%;height:100%;
+	img{width:100%; height:100%;}
+	}
+	span{display:block;width:16px;height:16px;
+	background: url(../../img/list/gb.png) 4px 0 no-repeat;
+	position:absolute;top:-16px;right:-16px;}
+}
+
+.xhlj{width:980px;margin:0 auto;
+	img{width:100%;}
+}
+.cy{width:980px;margin:0 auto;
+	img{width:100%}}
+
+.main1{width:980px;margin:0 auto;
+	.list{width:100%;padding-left:20px;
+
+	li{float:left;width:238px;height:300px;padding:0 10px 10px 0;
+	box-sizing:border-box;
+
+	div{width:100%;height:220px;
+		img{width:100%;height:100%}}
+	
+	a{fonts-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#333;display:block;padding:5px 10px;word-wrap:normal;
+	&hover{text-decoration:underline;}}
+	span{position: relative;width: 99px;height: 31px;
+    left: 13px;top: 10px;display:block; background:url(../../img/hd/qg.png)no-repeat;}
+	
+	}
+
+	}
+}
+
+.zhejiang{width:980px;margin:0 auto;
+	img{width:100%;height:100%;}}
+
+.zjlogo{width:980px;margin:0 auto;
+	img{width:100%;height:100%;}}
+
+.main2{width:980px;margin:0px auto;
+	.list2{width:100%;padding-left:20px;
+
+	li{float:left;width:238px;height:300px;padding:0 10px 10px 0;
+	box-sizing:border-box;
+
+	div{width:100%;height:220px;
+		img{width:100%;height:100%}}
+	
+	a{fonts-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#333;display:block;padding:5px 10px;word-wrap:normal;
+	&hover{text-decoration:underline;}}
+	span{position: relative;width: 99px;height: 31px;
+    left: 13px;top: 10px;display:block; background:url(../../img/hd/qg.png)no-repeat;}
+	
+	}
+
+	}
+}
+
+.last_photo{width:980px;margin:0 auto;
+
+	a{display:inline-block;width:100%;height:100%;
+
+	img{width:100%;height:100%;}}}

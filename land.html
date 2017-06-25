@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页面</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/land.css">
+</head>
+<body>
+<!--header开始了-->
+	
+		<div id="box1">
+		
+		<header>
+			
+
+			<ul class="left_tool">
+				<li class="Slogan">欢迎来到良品铺子官方商城！</li>
+				<li><a href="http://localhost/lppz/land.html">[登陆]</a></li>
+				<li><a href="http://localhost/lppz/register.html">[注册]</a></li>
+				<li class="Sign_out"><a href="">[退出]</a></li>
+				<li><a class="aplpay" href=""></a></li>
+				<li><a class="qq_land" href=""></a></li>
+				<li><a class="micro_land" href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+
+			<ul class="right_tool">
+				<li>
+					<div class = "gzlp">
+						<a class="follow_lp" href="">关注良品</a>|
+						<div class="QR_CODE">
+							<p class="gzwb">关注微博</p>
+							<div class="imgcode">
+								<img src="img/code.jpg" alt="">
+							</div>
+							<p class="wecharimg">微信扫一扫<br/>优惠随身携带</p>
+
+						</div>
+					</div>
+				</li>
+				<li><a class="Official_web" href="">官方网站</a> &nbsp; &nbsp;|</li>
+				<li><a  class="phone" href="">全国订购热线：<span>400-1171-5575</span></a></li>
+			</ul>
+		</header>
+
+	</div>
+<!--header结束了-->
+	<div class="logo">
+		<div class="pzlogo"></div>
+		<div class="logo_text">欢迎登录</div>
+	</div>
+
+<!--中间内容部分开始了-->
+
+<div class="content">
+		<div class="contert_left">
+			<img src="img/left_img2.jpg" alt="">
+		</div>
+		<div class="content_right">
+			<div class="title_reg">
+				<strong>会员登录</strong>
+				<span>新用户&nbsp;,&nbsp;<a href="http://localhost/lppz/register.html">免费注册&gt;</a></span>
+			</div>
+			<!--表单布局开始了-->
+				<ul class="list">
+						<li>	
+							<span>用户名/邮箱/手机号</span>
+							<div class="ipt">
+								<input type="text" id="username" name="username" class="tx-ipt">
+								<p>请输入用户名/邮箱/手机号</p>
+							</div>
+
+						</li>
+						<li>
+							<span>密码</span>
+							<div class="ipt">
+								<input type="password" id="password" name="password" class="tx-ipt">
+								<p>请输入密码</p>
+							</div>
+						</li>
+						<li>
+							<span class="lab">
+								<a href="">忘记密码</a>
+								<a class="activation" href="">已有会员卡,我要激活</a>
+
+							</span>
+							<p style="padding:5px 0"><input type="checkbox" id="Record_pass" checked>十五天内记住密码</p>
+							<div class="load_btn">
+								<input type="submit" class="log_btn" value="登录">
+								<!--点击登录后提示信息-->
+								<div class="land_information"></div>
+							</div>
+						</li>
+				</ul>	
+
+				<div class="Friendship_link">
+					<span>使用合作网站账号登录良品铺子：</span>
+					<div class="cooperation">
+						<a class="alipay_load" href=""></a>
+						<a class="qq" href=""></a>
+						<a class="weibo" href=""></a>
+					</div>
+				</div>
+
+
+				<div class="favor_phone">
+					<span class="text_favor_phone">良品微信商城，手机专属享优惠</span>
+					<span class="tu_favor_phone">
+						<div class="qrcode">
+							<img src="img/zzz.jpg" alt="">
+						</div>
+					</span>
+				</div>
+		</div>
+	</div>
+
+<!--中间内容部分结束了-->
+
+
+<!--footer开始了-->
+	<footer>
+		
+				<p class="footer_top">
+					<a href="">关于我们</a>
+					<span>|</span>
+					<a href="">联系我们</a>
+					<span>|</span>
+					<a href="">客户服务</a>
+					<span>|</span>
+					<a href="">诚聘英才</a>
+					<span>|</span>
+					<a href="">商务合作</a>
+					<span>|</span>
+					<a href="">媒体报道</a>
+					<span>|</span>
+					<a href="">网站地图</a>
+					<span>|</span>
+					<a href="">快递查询</a>
+				</p>
+		
+		<div class="footer_last">
+				Copyright@2006-2017 湖北良品铺子电子商务有限公司 All rights Reserved<br/>
+				<a href="">鄂ICP备15022981号</a>
+
+		</div>
+
+	</footer>
+
+
+<!--footer结束了-->
+</body>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/land.js"></script>
+<script src="js/cookie.js"></script>
+
+
+
+<script>	
+
+$(function(){
+	//console.log(jQuery)
+	$("#username").focus(function(){
+
+			$("#username").next("p").css({
+				display:"none"
+			})
+
+			$(this).css({
+				border:"1px solid #ffbdbe"
+			})
+			$(".land_information").css({
+				display:"none"
+			})
+
+			$("#password").val("")
+
+
+		})
+
+	$("#username").blur(function(){
+
+			$(this).css({
+				border:"1px solid #ccc"
+			})
+			var $username_value = $("#username").val()
+			//console.log(getCookie($username_value))
+			
+			var $password_cookie = getCookie($username_value)
+			if($password_cookie != ""){
+				$("#password").val($password_cookie)
+			}
+		})
+
+		$("#password").focus(function(){
+
+			$("#password").next("p").css({
+				display:"none"
+			})
+			$(this).css({
+				border:"1px solid #ffbdbe"
+			})
+			$(".land_information").css({
+				display:"none"
+			})
+
+		})
+
+		$("#password").blur(function(){
+
+			$(this).css({
+				border:"1px solid #ccc"
+			})
+
+		})
+
+
+$(document).ajaxStart(function(){
+				$(".land_information").css({
+					display:"block"
+				})
+				$IMG=$("<img src='http://s15.sinaimg.cn/mw690/001mWx81gy6GMBptvjM4e&690'>")
+				$(".land_information").html($IMG)
+
+			})
+
+
+
+	$(".log_btn").click(function(){
+
+		var $username_value = $("#username").val()
+		var $password_value = $("#password").val()
+
+		if($username_value == ""){
+			
+			$("#username").next("p").css({
+				display:"block"
+			})	
+			return;
+		}
+
+		if($password_value == ""){
+
+			$("#password").next("p").css({
+				display:"block"
+			})	
+			return;
+		}
+
+		
+
+
+		$.ajax({
+			url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+			type:"POST",
+			data:{
+				status:"login",
+				userID:$username_value,
+				password: $password_value
+			},
+			success:function(res){
+				switch(res){
+					case "0":$(".land_information").html("您输入的用户名不存在，请重新输入");break;
+					case "2":$(".land_information").html("您输入的用户名与密码不符，请重新输入");break;
+					default:$(".land_information").html("恭喜您！账号登陆成功，3秒后自动跳转到登陆页面");
+						
+						
+						//判断是否添加cookie
+						if($("#Record_pass").prop('checked')){
+							//setCookie("user",$username_value)
+							//setCookie("password",$password_value)
+							setCookie($username_value,$password_value)
+							if(getCookie("user_land")){
+								console.log("存在")
+								removeCookie("user_land")
+								setCookie("user_land",$username_value)
+							}else{
+								console.log("不存在")
+								setCookie("user_land",$username_value)
+							}
+						}
+						//3秒后跳转
+						setTimeout(function(){
+							window.location.href="http://localhost/lppz/homepage.html"
+						},3000)
+					break;
+				}
+			},
+			error:function(){
+				alert("非常抱歉，我们的服务器出现了故障，请您稍后再试！")
+			}
+		})
+
+
+
+	})
+
+})
+
+
+
+
+
+</script>
+</html>

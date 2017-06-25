@@ -1,0 +1,7 @@
+/* CSS Document */
+body,p,dl,dt,dd,ul,li,ol,fieldset,legend,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+body,html{height:100%;font-size:12px;font-family:"微软雅黑";}
+img,iframe{border:none}
+a{text-decoration:none;color:#333;}
+ul,li,ol{list-style:none}
+.clear{width:0;height:0;overflow:hidden;clear:both;}

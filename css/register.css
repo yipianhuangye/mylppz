@@ -1,0 +1,445 @@
+/*header开始了*/
+
+#box1{
+	width:100%;
+	height:29px;
+	line-height:29px;
+	font-size: 12px;
+	border-bottom: 1px solid #e7e7e7;
+	background: #fff;
+}
+
+#box1 header{
+	width:980px;
+	margin:0 auto;
+}
+
+#box1 header .left_tool{
+	float: left;
+}
+
+#box1 header .left_tool li{
+
+	float: left;
+	padding:0 4px;
+	color:#555;
+}
+
+#box1 header .left_tool li a{
+
+	color:#ed4545;
+}
+
+#box1 header .left_tool .Sign_out{
+
+	display: none;
+}
+
+#box1 header .left_tool li .aplpay{
+	background: url(../img/tool.png) no-repeat;
+	width:90px;
+	display:block;
+	height: 20px;
+    margin-top: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+#box1 header .left_tool li .qq_land{
+	background: url(../img/tool.png) -100px 0 no-repeat;
+	width:50px;
+	display: block;
+	height: 20px;
+    margin-top: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+#box1 header .left_tool li .micro_land{
+	background: url(../img/tool.png) -160px 0 no-repeat;
+	width:85px;
+	display: block;
+	height: 20px;
+    margin-top: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+
+
+#box1 header .right_tool{
+	float: right;
+}
+
+#box1 header .right_tool li{
+	float: left;
+	padding:0 4px;
+	color: #555;
+}
+
+header .right_tool .gzlp{
+
+	position: relative;
+}
+
+
+header .right_tool .gzlp .QR_CODE{
+	position: absolute;
+
+	top:29px;
+	left:-50px;
+	z-index: 100;
+	padding: 0 10px;
+	border:1px solid #eee;
+	border-top:none;
+	background: #fff;
+	display: none;
+}
+
+.gzlp .QR_CODE .gzwb{
+	width；100%;
+	padding-bottom: 10px;
+    border-bottom: 1px dotted #ddd;
+    }
+
+.gzlp .QR_CODE .imgcode{
+
+	padding:5px 0;
+}
+
+    
+.gzlp .QR_CODE .wecharimg{
+	background: url(../img/tool.png) -570px 7px no-repeat;
+	line-height: 16px;
+    padding: 5px 0 5px 35px;
+}
+
+
+#box1 header .right_tool .follow_lp{
+	padding-right:13px;
+	background: url(../img/sanjiao.png) right center no-repeat;
+}
+
+#box1 header .right_tool .Official_web{
+	height:29px;
+	line-height: 29px;
+}
+
+#box1 header .right_tool .Official_web:hover{
+	color: #e60012;
+	text-decoration: underline;
+}
+
+#box1 header .right_tool li .phone{
+	background: url(../img/smallimg.png) 0 7px no-repeat;
+	display: block;
+    height: 29px;
+    padding-left: 20px;
+}
+
+#box1 header .right_tool li .phone span{
+	font-size: 16px;
+    font-weight: 600;
+    color: #ed4545;
+    font-family: "Microsoft YaHei";
+    vertical-align: -1px;
+}
+
+/*header结束了*/
+
+
+
+/*登陆注册页的logo部分开始了*/
+
+.logo{
+	width:980px; 
+	height:124px;
+	margin:0 auto;
+	padding:30px 0 50px;
+	box-sizing:border-box;
+}
+
+.logo .pzlogo{
+	float: left;
+	margin-left: 5px;
+	background: url(../img/aaa.png) no-repeat;
+	width: 130px;
+    height: 44px;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.logo .logo_text{
+	float: left;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    margin: 10px 0 0 15px;
+    padding-left: 15px;
+    border-left: 1px solid #e6201a;
+}
+
+/*登陆注册页的logo部分结束了*/
+
+
+/*登陆注册页的内容部分开始了*/
+
+.content{
+	width:980px;
+	height:593px;
+	margin:0 auto;
+	padding-bottom: 50px;
+}
+
+.content .contert_left{
+	float: left;
+	width:500px;
+	padding:20px;
+
+}
+
+
+.content .content_right{
+	float: right;
+	width:425px;
+}
+
+.content .content_right .title_reg{
+	width: 292px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 115px;
+    border-top: 3px solid #e83029;
+}
+
+.title_reg strong{
+	font-size: 16px;
+	float: left;
+	font-weight: bolder;
+}
+
+.title_reg span{
+	float: right;
+}
+
+.title_reg span a{
+	color:#e83029;
+}
+
+.title_reg span a:hover{
+	text-decoration: underline;
+}
+
+/*真正表单的布局*/
+.content_right .form_list{
+	padding:0 10px;
+}
+
+.content_right .form_list li{
+	position: relative;
+    line-height: 40px;
+    padding: 13px 0;
+    height:40px;
+}
+.form_list li input{
+	outline:none;
+}
+
+.form_list li .name_msg,
+.form_list li .password_msg,
+.form_list li .pass_second,
+.form_list li .phone_num{
+	float: left;
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+.form_list li b{
+
+	color: red;
+	font-weight: bolder;
+
+}
+
+.form_list li .user,
+.form_list li .pass,
+.form_list li .pass_sec,
+.form_list li .Mobphone_num{
+	width:260px;
+	
+	float: left;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 5px;
+    padding-right:25px;
+    border: 1px solid #ccc;
+	
+}
+
+.form_list li .user{
+	background: url(../img/form.png) right 8px no-repeat;
+}
+
+.form_list li .pass{
+	background: url(../img/form.png) right -192px no-repeat;
+}
+
+.form_list li .pass_sec{
+	background: url(../img/form.png) right -192px no-repeat;
+}
+
+.form_list li .Mobphone_num{
+	background: url(../img/form.png) right -58px no-repeat;
+}
+
+.form_list li .Verification_code,
+.form_list li .Short_msg{
+	float: left;
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    font-weight: normal;
+    padding-right: 5px;
+}
+
+.form_list li .yzm_input{
+	width:144px;
+	float: left;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 5px;
+    padding-right:25px;
+    border: 1px solid #ccc;
+	
+}
+
+/*后添加的提示input框获焦后信息的span*/
+
+.form_list li .userPrompt{
+	width: 290px;
+	background:#dedede;
+	height:20px;
+	position:absolute;
+	top:53px;
+	right:10px;
+	text-align:center;
+	line-height:20px;
+	display: none;
+}
+/*后添加的提示input框获焦后信息的span*/
+
+
+
+.form_list li .yzm_dis{
+	width:60px;
+	height:40px;
+	text-align: center;
+	line-height: 40px;
+	display: inline-block;
+	background: #bfbfbf;
+	margin-left:2px;
+}
+
+.form_list li .yzm_chg{
+	width:50px;
+	height:40px;
+	text-align: center;
+	line-height: 40px;
+	font-style: normal;
+	margin-left:2px;
+	display: inline-block;
+	color: #005ea7;
+	cursor:pointer;
+}
+
+.form_list li .shortMsg{
+	float: left;
+    width: 144px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+}
+
+.form_list li .Obtain_dxyzm{
+	float: left;
+    width: 130px;
+    height: 40px;
+    color: #666;
+    margin-left: 5px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background: #eee;
+}
+
+
+.form_list li .agreement{
+	padding: 0 0 0 105px;
+}
+
+.form_list li .agreement a{
+	color: #e83029;
+}
+
+.form_list li .agreement a:hover{
+
+	text-decoration: underline;
+}
+
+.form_list li .submit{
+	padding-left: 105px;
+	position: relative;
+}
+
+.form_list li .sub_btn{
+	width: 292px;
+    height: 38px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+    border: none;
+    background: #f04747;
+}
+.form_list li .submit .land_information{
+	width:292px;
+	height:38px;
+	background: #efefef;
+	border:1px solid yellow;
+	border-radius: 5px;
+	position: absolute;
+	top:-40px;
+	left:105px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 100;
+	display: none;
+}
+
+
+/*表单部分css结束*/
+/*footer部分css开始*/
+footer{
+	width:980px;
+	margin:0 auto;
+	text-align: center;
+    padding: 20px 0;
+    color: #777;
+}
+
+footer a{
+	color: #777;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}

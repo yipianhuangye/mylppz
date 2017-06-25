@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/logo.css">
+	<link rel="stylesheet" href="css/register.css">
+
+</head>
+<body>
+		<div id="box1">
+		
+		<header>
+
+			<ul class="left_tool">
+				<li class="Slogan">欢迎来到良品铺子官方商城！</li>
+				<li><a href="http://localhost/lppz/land.html">[登陆]</a></li>
+				<li><a href="http://localhost/lppz/register.html">[注册]</a></li>
+				<li class="Sign_out"><a href="">[退出]</a></li>
+				<li><a class="aplpay" href=""></a></li>
+				<li><a class="qq_land" href=""></a></li>
+				<li><a class="micro_land" href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+
+			<ul class="right_tool">
+				<li>
+					<div class = "gzlp">
+						<a class="follow_lp" href="">关注良品</a>|
+						<div class="QR_CODE">
+							<p class="gzwb">关注微博</p>
+							<div class="imgcode">
+								<img src="img/code.jpg" alt="">
+							</div>
+							<p class="wecharimg">微信扫一扫<br/>优惠随身携带</p>
+
+						</div>
+					</div>
+				</li>
+				<li><a class="Official_web" href="">官方网站</a> &nbsp; &nbsp;|</li>
+				<li><a  class="phone" href="">全国订购热线：<span>400-1171-5575</span></a></li>
+			</ul>
+		</header>
+
+	</div>
+
+<!--头部的html代码结束了-->
+	
+<!--logo部分的的html代码要开始了-->
+	<div class="logo">
+		<div class="pzlogo"></div>
+		<div class="logo_text">欢迎注册</div>
+	</div>
+<!--logo部分的的html代码结束了-->
+
+
+<!--中间内容content部分的的html代码要开始了-->
+	<div class="content">
+		<div class="contert_left">
+			<img src="img/left_img2.jpg" alt="">
+		</div>
+		<div class="content_right">
+			<div class="title_reg">
+				<strong>用户注册</strong>
+				<span>已有账户&nbsp;,&nbsp;<a href="http://localhost/lppz/land.html">点此登陆&gt;</a></span>
+			</div>
+			<!--表单布局开始了-->
+			<div class="form">
+					<ul class="form_list">
+						<li >
+							<span class="name_msg">
+								<b>*</b>用户名：
+							</span>
+							<input type="text" name="username" id="username" class="user">
+							<span class="userPrompt">4-20位字符，支持数字、字母下、划线</span>
+						</li>
+						<li>
+							<span class="password_msg">
+								<b>*</b>密  &nbsp; 码：
+							</span>
+							<input type="password" name="password" id="password" class="pass">
+							<span class="userPrompt">6-20位字符，由字母、数字和符号两种以上组合</span>
+						</li>
+						<li>
+							<span class="pass_second">
+								<b>*</b>确认密码：
+							</span>
+							<input type="password" name="password_sec" id="password_sec" class="pass_sec">
+							<span class="userPrompt">请再次输入密码</span>
+						</li>
+						<li>
+							<span class="phone_num">
+								<b>*</b>手机号：
+							</span>
+							<input type="text" name="phonenum" id="Mobphone" class="Mobphone_num">
+							<span class="userPrompt">请输入手机号</span>
+						</li>
+						<li>
+							<span class="Verification_code">
+								<b>*</b>验证码：
+							</span>
+							<input type="text" class="yzm_input">
+							
+							<div class="yzm_dis">0000</div>
+							<i class="yzm_chg">换一张</i>
+							<span class="userPrompt">请输入验证码</span>
+						</li>
+						<li>
+							<span class="Short_msg">
+								<b>*</b>短信验证码：
+							</span>
+							<input type="text" class="shortMsg">
+							<input type="button" class="Obtain_dxyzm" value="获取短信验证码">
+							<span class="userPrompt">请输入短信验证码</span>
+						</li>
+						<li>
+							<div class="agreement">
+								<b>*</b>
+								<input type="checkbox" checked class="select_rading">我已阅读并同意
+								<a href="">《良品铺子用户注册协议》</a>
+							</div>
+						</li>
+						<li>
+							<div class="submit">
+
+								<input type="button" value="同意协议并注册" class="sub_btn">
+								<!--点击登录后提示信息-->
+								<div class="land_information"></div>
+							</div>
+							
+						</li>
+					</ul>
+				
+			</div>
+		</div>
+	</div>
+
+<!--中间内容content部分的的html代码结束了-->
+
+	<footer>Copyright@2006-2014 湖北良品铺子电子商务有限公司 All rights Reserved<br/>
+			<a href="">鄂ICP备15022981号</a></footer>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/register.js"></script>
+
+
+
+
+<script>
+$(function(){
+
+	var arr_input = [false,false,false,false,false,false,false]
+
+//用户名正则验证：
+	//用户名获取焦点
+	$("#username").focus(function(){
+		
+		$(this).next("span").css({
+			display:"block"
+		})
+		
+		 $(this).css({
+		 	border:"1px solid green"
+		 })
+		$(".land_information").css({
+		display:"none"
+	})
+
+	})
+
+	
+	//用户名失去焦点
+	$("#username").blur(function(){
+
+		var $user = $("#username").val()
+		if($user !=""){
+
+				if(!/^\w{4,20}$/.test($user)){
+
+					$(this).next("span").html("用户名长度只能在4-20位字符之间")
+					$(this).next("span").css({
+				
+						background:"#ffebeb",
+						border:"1px solid #ffbdbe",
+						color:"#e83029"
+					})
+
+					$(this).css({
+		 				border:"1px solid #ffbdbe"
+		 			})
+
+				}else{
+
+					$(this).css({
+		 				border:"1px solid #ccc",
+		 				background: "url(img/form.png) right -318px no-repeat"
+		 			})
+					$(this).next("span").css({
+						display:"none"
+					})
+
+					arr_input[0]=true
+
+				}
+
+		}else{
+				$(this).css({
+		 				border:"1px solid #ccc"	
+		 		})
+
+		 		$(this).next("span").css({
+						display:"none"
+				})
+		}
+
+		
+	})
+//用户名正则验证结束
+
+
+//密码验证开始
+	//密码获取焦点
+		$("#password").focus(function(){
+
+			$(this).next("span").css({
+				display:"block"
+			})
+		
+			$(this).css({
+		 		border:"1px solid green"
+			})
+			$(".land_information").css({
+				display:"none"
+			})
+		})
+	
+	//密码失去焦点
+
+		$("#password").blur(function(){
+
+			var $passvalue = $(this).val()
+			//console.log($passvalue)
+
+			if($passvalue != ""){
+
+				if(!/(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,20}$/.test($passvalue)){
+					//console.log("error")
+					$(this).next("span").html("密码输入不符合要求")
+					$(this).next("span").css({
+				
+						background:"#ffebeb",
+						border:"1px solid #ffbdbe",
+						color:"#e83029"
+					})
+
+					$(this).css({
+		 				border:"1px solid #ffbdbe"
+		 			})
+
+				}else{
+
+					$(this).css({
+		 				border:"1px solid #ccc",
+		 				background: "url(img/form.png) right -318px no-repeat"
+		 			})
+					$(this).next("span").css({
+						display:"none"
+					})
+
+					arr_input[1]=true
+				}
+
+			}else{
+
+				$(this).css({
+		 				border:"1px solid #ccc"	
+		 		})
+
+		 		$(this).next("span").css({
+						display:"none"
+				})
+			}
+
+		})
+
+//密码框正则验证结束
+
+
+	//再次输入密码验证
+		//再次输入密码获取焦点
+		$("#password_sec").focus(function(){
+
+			//console.log("ok")
+			$(this).next("span").css({
+				display:"block"
+			})
+		
+			 $(this).css({
+		 		border:"1px solid green"
+			 })
+
+			$(".land_information").css({
+				display:"none"
+			})
+
+		})
+
+
+		//再次输入密码失去焦点
+		$("#password_sec").blur(function(){
+
+			//console.log("okq")
+			var $passvalue_sec = $(this).val()
+
+			//console.log($passvalue_sec)
+			var $passvalue = $("#password").val()
+			//console.log($passvalue)
+
+			if($passvalue_sec !=""){
+				if($passvalue != $passvalue_sec){
+
+					$(this).next("span").html("两次输入的密码不一致")
+					$(this).next("span").css({
+				
+						background:"#ffebeb",
+						border:"1px solid #ffbdbe",
+						color:"#e83029"
+					})
+
+					$(this).css({
+		 				border:"1px solid #ffbdbe"
+		 			})
+				}else{
+					$(this).css({
+		 				border:"1px solid #ccc",
+		 				background: "url(img/form.png) right -318px no-repeat"
+		 			})
+					$(this).next("span").css({
+						display:"none"
+					})
+					arr_input[2]=true
+				}
+
+			}else{
+
+				$(this).css({
+		 				border:"1px solid #ccc"	
+		 		})
+
+		 		$(this).next("span").css({
+						display:"none"
+				})
+			}
+		})
+//再次输入密码验证结束
+
+//手机号验证
+		//手机号输入框获取焦点
+		$("#Mobphone").focus(function(){
+			//console.log(1)
+			$(this).next("span").css({
+				display:"block"
+			})
+		
+			 $(this).css({
+		 		border:"1px solid green"
+			})
+			$(".land_information").css({
+				display:"none"
+			})
+
+		})
+		//手机号输入框失去焦点
+		$("#Mobphone").blur(function(){
+
+			//console.log(2)
+			var $Mobphone_value = $(this).val()
+
+			//console.log($Mobphone_value.length)
+
+			if($Mobphone_value !=""){
+				if($Mobphone_value.length != 11){
+					//先判断是不是11位
+					$(this).next("span").html("手机号长度必须是11位")
+					$(this).next("span").css({
+				
+						background:"#ffebeb",
+						border:"1px solid #ffbdbe",
+						color:"#e83029"
+					})
+
+					$(this).css({
+		 				border:"1px solid #ffbdbe"
+		 			})
+				}else if(!/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/.test($Mobphone_value)){
+					//判断是不是符合手机号规格
+					$(this).next("span").html("手机号格式不正确，请重新输入")
+					$(this).next("span").css({
+				
+						background:"#ffebeb",
+						border:"1px solid #ffbdbe",
+						color:"#e83029"
+					})
+
+					$(this).css({
+		 				border:"1px solid #ffbdbe"
+		 			})
+
+				}else{
+					//正确的执行的
+					$(this).css({
+		 				border:"1px solid #ccc"
+		 			})
+					$(this).next("span").css({
+						display:"none"
+					})
+					arr_input[3]=true
+
+				}
+
+			}else{
+				//没输入手机号执行的
+				$(this).css({
+		 				border:"1px solid #ccc"	
+		 		})
+
+		 		$(this).next("span").css({
+						display:"none"
+				})
+			}
+		})
+//手机号码验证ok  结束
+	
+//验证码验证开始
+	
+	//验证码设定初始值
+	$(".yzm_dis").html(randomInt())
+
+	//点击更换验证码
+	$(".yzm_dis").next("i").click(function(){
+
+		$(".yzm_dis").html(randomInt())
+
+	})
+
+	
+	//验证码输入框获取焦点事件
+	$(".yzm_input").focus(function(){
+
+		//console.log(randomInt())
+		
+		$(this).siblings(".userPrompt").css({
+			display:"block"
+		})
+		
+		$(this).css({
+		 	border:"1px solid green"
+		})
+		$(".land_information").css({
+			display:"none"
+		})
+	})
+
+	//验证码输入框失去焦点事件
+
+	$(".yzm_input").blur(function(){
+
+		var $yzm_input_value = $(this).val()
+
+		//console.log($yzm_input_value)
+
+		var $yzm_dis_value = $(".yzm_dis").text()  
+
+		console.log($yzm_dis_value)
+
+		if($yzm_input_value !=""){
+			if($yzm_input_value != $yzm_dis_value){
+				$(this).siblings(".userPrompt").html("验证码不正确，请重新输入")
+				$(this).siblings(".userPrompt").css({	
+					background:"#ffebeb",
+					border:"1px solid #ffbdbe",
+					color:"#e83029"
+			})
+
+				$(this).css({
+		 			border:"1px solid #ffbdbe"
+		 		})
+
+			}else{
+
+				$(this).css({
+		 			border:"1px solid #ccc"	
+		 		})
+
+		 		$(this).siblings(".userPrompt").css({
+					display:"none"
+				})
+				arr_input[4]=true
+			}
+
+
+		}else{
+
+			$(this).css({
+		 		border:"1px solid #ccc"	
+		 	})
+
+		 	$(this).siblings(".userPrompt").css({
+				display:"none"
+			})
+
+		}
+		
+	})
+//验证码正则验证完成
+
+
+
+
+//短信验证码正则开始
+	//短信验证码获焦事件
+
+	$(".shortMsg").focus(function(){
+		$(this).siblings(".userPrompt").css({
+			display:"block"
+		})
+		
+		$(this).css({
+		 	border:"1px solid green"
+		})
+		$(".land_information").css({
+			display:"none"
+		})
+	})
+
+	//短信验证码失焦事件
+
+	$(".shortMsg").blur(function(){
+		var $shortMsg_value = $(".shortMsg").val()
+		//console.log($shortMsg_value)
+		if($shortMsg_value != ""){
+			if(!/^\d+$/.test($shortMsg_value)){
+
+			$(this).siblings(".userPrompt").html("手机验证码输入不正确")
+			$(this).siblings(".userPrompt").css({	
+				background:"#ffebeb",
+				border:"1px solid #ffbdbe",
+				color:"#e83029"
+			})
+
+			$(this).css({
+		 		border:"1px solid #ffbdbe"
+		 	})
+			
+		}else{
+			
+			$(this).css({
+		 		border:"1px solid #ccc"	
+		 	})
+
+		 	$(this).siblings(".userPrompt").css({
+				display:"none"
+			})
+			arr_input[5]=true
+		}
+	}else{
+
+			$(this).css({
+		 		border:"1px solid #ccc"	
+		 	})
+
+		 	$(this).siblings(".userPrompt").css({
+				display:"none"
+			})
+	}
+
+
+	})
+
+
+//短信验证正则结束了
+
+
+//多选框验证开始
+	if($(".select_rading").prop('checked')){
+		arr_input[6]=true
+	}
+	
+
+//登录成功开始的等待动图
+$(document).ajaxStart(function(){
+	$(".land_information").css({
+		display:"block"
+	})
+	$IMG=$("<img src='http://s15.sinaimg.cn/mw690/001mWx81gy6GMBptvjM4e&690'>")
+	$(".land_information").html($IMG)
+
+})
+
+
+//开始点击注册了
+	$(".sub_btn").click(function(){
+
+		//console.log(1)
+		for(var j = 0 ; j <arr_input.length ; j++){
+
+			if(arr_input[j] == false){
+				switch(j){
+					case 0 :alert("请输入正确用户名");break;
+					case 1 :alert("请输入正确密码");break;
+					case 2 :alert("请输确认两次密码是否一致");break;
+					case 3 :alert("请输入正确手机号");break;
+					case 4 :alert("请输入正确验证码");break;
+					case 5 :alert("请输入正确手机验证码");break;
+					case 6 :alert("请输选择并阅读良品铺子用户协议");break;
+				}
+				return;
+			}
+
+		}
+
+		var $user = $("#username").val() 
+		var $passvalue = $("#password").val()
+		//console.log($user)
+		//console.log($passvalue)
+		$.ajax({
+			url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+			type:"POST",
+			data:{
+				status:"register",
+				userID:$user,
+				password:$passvalue
+			},
+			success:function(res){
+				res = Number(res)
+				switch(res){
+					case 0:$(".land_information").html("实在抱歉，此用户名已经存在了请重新输入一个");break;
+					case 1:$(".land_information").html("恭喜您！账号注册成功，3秒后自动跳转到登陆页面");
+							setTimeout(function(){
+
+								window.location.href="land.html"
+							},3000)
+
+					break;
+					case 2:(".land_information").html("实在抱歉,我们的服务器出现了故障，请稍后再试");;break;
+				}
+			},
+			error:function(){
+
+				alert("能不能好好注册啊")
+			}
+		})
+	})
+
+
+
+
+//封装获取焦点后显示提示信息和input框变绿
+	/*function focus_input(){
+
+		$(this).next("span").css({
+			display:"block"
+		})
+		
+		 $(this).css({
+		 	border:"1px solid green"
+		 })
+	}*/
+//封装随机四位数
+
+function randomInt(){
+	var num = ""
+	for(var i = 0 ; i < 4 ; i++){
+		num += Math.round(Math.random()*9)
+	}
+	return num
+
+
+}
+
+
+})
+
+</script>
+</html>

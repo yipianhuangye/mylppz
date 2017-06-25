@@ -1,0 +1,435 @@
+
+/*header开始了*/
+
+#box1{
+	width:100%;
+	height:29px;
+	line-height:29px;
+	font-size: 12px;
+	border-bottom: 1px solid #e7e7e7;
+	background: #fff;
+}
+
+#box1 header{
+	width:980px;
+	margin:0 auto;
+}
+
+#box1 header .left_tool{
+	float: left;
+}
+
+#box1 header .left_tool li{
+
+	float: left;
+	padding:0 4px;
+	color:#555;
+}
+
+#box1 header .left_tool li a{
+
+	color:#ed4545;
+}
+
+#box1 header .left_tool .Sign_out{
+
+	display: none;
+}
+
+#box1 header .left_tool li .aplpay{
+	background: url(../img/tool.png) no-repeat;
+	width:90px;
+	display:block;
+	height: 20px;
+    margin-top: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+#box1 header .left_tool li .qq_land{
+	background: url(../img/tool.png) -100px 0 no-repeat;
+	width:50px;
+	display: block;
+	height: 20px;
+    margin-top: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+#box1 header .left_tool li .micro_land{
+	background: url(../img/tool.png) -160px 0 no-repeat;
+	width:85px;
+	display: block;
+	height: 20px;
+    margin-top: 4px;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+
+
+#box1 header .right_tool{
+	float: right;
+}
+
+#box1 header .right_tool li{
+	float: left;
+	padding:0 4px;
+	color: #555;
+}
+
+header .right_tool .gzlp{
+
+	position: relative;
+}
+
+
+header .right_tool .gzlp .QR_CODE{
+	position: absolute;
+
+	top:29px;
+	left:-50px;
+	z-index: 100;
+	padding: 0 10px;
+	border:1px solid #eee;
+	border-top:none;
+	background: #fff;
+	display: none;
+}
+
+.gzlp .QR_CODE .gzwb{
+	width；100%;
+	padding-bottom: 10px;
+    border-bottom: 1px dotted #ddd;
+    }
+
+.gzlp .QR_CODE .imgcode{
+
+	padding:5px 0;
+}
+
+    
+.gzlp .QR_CODE .wecharimg{
+	background: url(../img/tool.png) -570px 7px no-repeat;
+	line-height: 16px;
+    padding: 5px 0 5px 35px;
+}
+
+
+#box1 header .right_tool .follow_lp{
+	padding-right:13px;
+	background: url(../img/sanjiao.png) right center no-repeat;
+}
+
+#box1 header .right_tool .Official_web{
+	height:29px;
+	line-height: 29px;
+}
+
+#box1 header .right_tool .Official_web:hover{
+	color: #e60012;
+	text-decoration: underline;
+}
+
+#box1 header .right_tool li .phone{
+	background: url(../img/smallimg.png) 0 7px no-repeat;
+	display: block;
+    height: 29px;
+    padding-left: 20px;
+}
+
+#box1 header .right_tool li .phone span{
+	font-size: 16px;
+    font-weight: 600;
+    color: #ed4545;
+    font-family: "Microsoft YaHei";
+    vertical-align: -1px;
+}
+
+/*header结束了*/
+
+/*登陆注册页的logo部分开始了*/
+
+.logo{
+	width:980px; 
+	height:124px;
+	margin:0 auto;
+	padding:30px 0 50px;
+	box-sizing:border-box;
+}
+
+.logo .pzlogo{
+	float: left;
+	margin-left: 5px;
+	background: url(../img/aaa.png) no-repeat;
+	width: 130px;
+    height: 44px;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.logo .logo_text{
+	float: left;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    margin: 10px 0 0 15px;
+    padding-left: 15px;
+    border-left: 1px solid #e6201a;
+}
+
+/*登陆注册页的logo部分结束了*/
+
+
+/*中间内容部分开始*/
+.content{
+	width:980px;
+	height:344px;
+	margin:0 auto;
+	padding-bottom: 50px;
+}
+
+.content .list input{
+	outline: none;
+}
+
+.content .contert_left{
+	float: left;
+	width:500px;
+	height:300px;
+	padding:20px;
+
+}
+
+.content .contert_left img{
+
+	width:100%;
+	height:100%;
+}
+
+.content .content_right{
+	float: right;
+    width: 320px;
+    padding: 0 30px;
+    border-top: 3px solid #e83029;
+}
+
+.content .content_right .title_reg{
+	
+    height: 40px;
+    line-height: 40px;
+}
+
+.title_reg strong{
+	font-size: 16px;
+	float: left;
+	font-weight: bolder;
+}
+
+.title_reg span{
+	float: right;
+}
+
+.title_reg span a{
+	color:#e83029;
+}
+
+.title_reg span a:hover{
+	text-decoration: underline;
+}
+
+
+/*表单部分的样式开始了*/
+
+.list li{
+	padding:5px 0;
+}
+
+.list li>span{
+   display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+}
+
+.ipt{
+	position: relative;
+}
+
+.ipt .tx-ipt{
+	width: 308px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+}
+
+.ipt p{
+	position: absolute;
+    bottom: -22px;
+    left: 0;
+    z-index: 9;
+    width: 304px;
+    line-height: 16px;
+    color: #e6393d;
+    padding: 2px 3px;
+    border: 1px solid #ffbdbf;
+    background: #ffebec;
+   	display: none;
+}
+
+.list li .lab a{
+	color: #555;
+   	text-decoration: none;
+    outline: none;
+}
+
+.list .lab .activation{
+
+	color:#005ea7
+}
+
+.list li .log_btn{
+	width: 320px;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: #ff5353;
+}
+
+.list li .load_btn{
+	position: relative;
+}
+
+
+ 
+/*登录状态提示信息*/
+
+.list li .load_btn .land_information{
+	width:320px;
+	height:50px;
+	background: #efefef;
+	border:1px solid yellow;
+	border-radius: 5px;
+	position: absolute;
+	top:-52px;
+	left:0;
+	text-align: center;
+	line-height: 50px;
+	z-index: 100;
+	display: none;
+
+}
+
+
+.Friendship_link{
+	margin-top:5px;
+}
+.Friendship_link span{display: block;
+    line-height: 24px;
+    color: #777;}
+
+.Friendship_link .cooperation{
+	padding-bottom: 10px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.Friendship_link .cooperation a{
+	float: left;
+    display: block;
+    height: 20px;
+    margin: 5px 10px 0 0;
+    text-indent: -999px;
+    line-height: 24px;
+    color: #777;
+}
+
+
+.Friendship_link .cooperation .alipay_load{
+	width:90px;
+	background: url(../img/tool.png) no-repeat;
+}
+
+.Friendship_link .cooperation .qq{
+	width:50px;
+	background: url(../img/tool.png) -100px 0 no-repeat;
+}
+
+.Friendship_link .cooperation .weibo{
+	width:85px;
+	background: url(../img/tool.png) -160px 0 no-repeat;
+}
+
+
+.favor_phone{
+	float: right;
+}
+
+.favor_phone .tu_favor_phone{
+	position: relative;
+	display: block;
+    width: 30px;
+    height: 20px;
+  
+    background: url(../img/tool.png) -477px 0 no-repeat;
+    float: right;
+}
+
+
+.favor_phone .qrcode{
+	position: absolute;
+	top:-150px;
+	right:-150px;
+	width:150px;
+	height:175px;
+    padding: 5px;
+    border: 1px solid #eee;
+    background: #fff;
+  	 display: none;
+}
+/*中间表单部分结束*/
+
+/*底部footer开始*/
+footer{
+	width:980px;
+	height:94px;
+	margin:0 auto;
+}
+
+footer p{
+	text-align: center;
+}
+
+footer p span{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+footer p a:hover{
+	color:#e60012;
+	text-decoration: underline;
+}
+footer .footer_last{
+	text-align: center;
+    padding: 20px 0;
+    color: #777;
+}
+footer .footer_last a{
+	color: #777;
+}
+
+footer .footer_last a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+

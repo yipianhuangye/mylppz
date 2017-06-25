@@ -1,0 +1,158 @@
+body {
+  background: url(../../img/hd/bg.jpg); }
+
+.active_banner {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+  .active_banner img {
+    width: 100%; }
+
+.banner {
+  position: fixed;
+  bottom: 0px;
+  right: 36px;
+  width: 300px;
+  height:106px;
+  z-index: 2; }
+  .banner img {
+    width: 300px;
+    position: absolute;
+    display: none; }
+
+.leftSuspension {
+  width: 100px;
+  height: 500px;
+  position: fixed;
+  top: 25%;
+  left: 30px; }
+  .leftSuspension a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .leftSuspension a img {
+      width: 100%;
+      height: 100%; }
+  .leftSuspension span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../../img/list/gb.png) 4px 0 no-repeat;
+    position: absolute;
+    top: -16px;
+    right: -16px; }
+
+.xhlj {
+  width: 980px;
+  margin: 0 auto; }
+  .xhlj img {
+    width: 100%; }
+
+.cy {
+  width: 980px;
+  margin: 0 auto; }
+  .cy img {
+    width: 100%; }
+
+.main1 {
+  width: 980px;
+  margin: 0 auto; }
+  .main1 .list {
+    width: 100%;
+    padding-left: 20px; }
+    .main1 .list li {
+      float: left;
+      width: 238px;
+      height: 300px;
+      padding: 0 10px 10px 0;
+      box-sizing: border-box; }
+      .main1 .list li div {
+        width: 100%;
+        height: 220px; }
+        .main1 .list li div img {
+          width: 100%;
+          height: 100%; }
+      .main1 .list li a {
+        fonts-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #333;
+        display: block;
+        padding: 5px 10px;
+        word-wrap: normal; }
+        .main1 .list li ahover {
+          text-decoration: underline; }
+      .main1 .list li span {
+        position: relative;
+        width: 99px;
+        height: 31px;
+        left: 13px;
+        top: 10px;
+        display: block;
+        background: url(../../img/hd/qg.png) no-repeat; }
+
+.zhejiang {
+  width: 980px;
+  margin: 0 auto; }
+  .zhejiang img {
+    width: 100%;
+    height: 100%; }
+
+.zjlogo {
+  width: 980px;
+  margin: 0 auto; }
+  .zjlogo img {
+    width: 100%;
+    height: 100%; }
+
+.main2 {
+  width: 980px;
+  margin: 0px auto; }
+  .main2 .list2 {
+    width: 100%;
+    padding-left: 20px; }
+    .main2 .list2 li {
+      float: left;
+      width: 238px;
+      height: 300px;
+      padding: 0 10px 10px 0;
+      box-sizing: border-box; }
+      .main2 .list2 li div {
+        width: 100%;
+        height: 220px; }
+        .main2 .list2 li div img {
+          width: 100%;
+          height: 100%; }
+      .main2 .list2 li a {
+        fonts-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #333;
+        display: block;
+        padding: 5px 10px;
+        word-wrap: normal; }
+        .main2 .list2 li ahover {
+          text-decoration: underline; }
+      .main2 .list2 li span {
+        position: relative;
+        width: 99px;
+        height: 31px;
+        left: 13px;
+        top: 10px;
+        display: block;
+        background: url(../../img/hd/qg.png) no-repeat; }
+
+.last_photo {
+  width: 980px;
+  margin: 0 auto; }
+  .last_photo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+    .last_photo a img {
+      width: 100%;
+      height: 100%; }
+
+/*# sourceMappingURL=activepage.css.map */
